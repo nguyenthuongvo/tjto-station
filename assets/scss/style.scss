@@ -1,135 +1,61 @@
-/***************************************************************************************************************
-||||||||||||||||||||||||||||            MASTER STYLESHEET FOR DIMON         ||||||||||||||||||||||||||||||||||||
-****************************************************************************************************************
-||||||||||||||||||||||||||||              TABLE OF CONTENT                  ||||||||||||||||||||||||||||||||||||
-****************************************************************************************************************
-****************************************************************************************************************
-* 1. common styles
-* 2. header styles
-* 3. banner styles
-* 4. blog styles
-* 5. sidebar styles
-* 6. footer styles
-* 7. inner-banner styles
-* 8. video styles
-* 9. brand styles
-* 10. mailchimp styles
-* 11. accrodion styles
-* 12. fact styles
-* 13. testimonials styles
-* 14. pricing styles
-* 15. cta styles
-* 16. service styles
-* 17. app-shot styles
-****************************************************************************************************************
-||||||||||||||||||||||||||||            End TABLE OF CONTENT                ||||||||||||||||||||||||||||||||||||
-****************************************************************************************************************/
+/*-----------------------------------------------------------------------------------
 
+    Template Name: Crypten – Cryptocurrency & ICO HTML Template
+    Template URI: http://gfxpartner.com/
+    Description: Crypten – Cryptocurrency & ICO HTML Template
+    Author: MD THAHERIL ISLAM
+    Author URI: http://gfxpartner.com/
+    Version: 1.0
 
-// helper file
+-----------------------------------------------------------------------------------
 
-@import 'helper';
+    CSS INDEX
+    ===================
 
-/*
-* 1. common styles
-*/
+    01. Theme default CSS
+    02. Header
+    03. banner
+    04. ico-sale
+    05. who-we-are
+    06. benefits
+    07. marketplace
+    08. token
+    09. crypten-document
+    10. how-work
+    11. future-roadmap
+    12. team
+    13. faq
+    14. blog
+    15. contact
+    16. footer
+    17. blog-post
+    18. error
+    19. crypten-features
+    20. stakeholders
+    21. documents
 
+-----------------------------------------------------------------------------------*/
+
+@import 'variables';
+@import 'mixin';
 @import 'common';
-
-/*
-* 2. header styles
-*/
-
 @import 'header';
-
-/*
-* 3. banner styles
-*/
-
 @import 'banner';
-
-/*
-* 4. blog styles
-*/
-
+@import 'ico-sale';
+@import 'who-we-are';
+@import 'benefits';
+@import 'marketplace';
+@import 'token';
+@import 'crypten-document';
+@import 'how-work';
+@import 'future-roadmap';
+@import 'team';
+@import 'faq';
 @import 'blog';
-
-/*
-* 5. sidebar styles
-*/
-
-@import 'sidebar';
-
-/*
-* 6. footer styles
-*/
-
+@import 'contact';
 @import 'footer';
-
-/*
-* 7. inner-banner styles
-*/
-
-@import 'inner-banner';
-
-/*
-* 8. video styles
-*/
-
-@import 'video';
-
-/*
-* 9. brand styles
-*/
-
-@import 'brand';
-
-/*
-* 10. mailchimp styles
-*/
-
-@import 'mailchimp';
-
-/*
-* 11. accrodion styles
-*/
-
-@import 'accrodion';
-
-/*
-* 12. fact styles
-*/
-
-@import 'fact';
-
-/*
-* 13. testimonials styles
-*/
-
-@import 'testimonials';
-
-/*
-* 14. pricing styles
-*/
-
-@import 'pricing';
-
-/*
-* 15. cta styles
-*/
-
-@import 'cta';
-
-/*
-* 16. service styles
-*/
-
-@import 'service';
-
-
-
-/*
-* 17. app-shot styles
-*/
-
-@import 'app-shot';
+@import 'blog-post';
+@import 'error';
+@import 'crypten-features';
+@import 'stakeholders';
+@import 'documents';

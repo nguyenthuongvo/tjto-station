@@ -1,180 +1,225 @@
-body {
-    font-family: $thm-font;
-    color: $thm-text-color;
-    font-size: 18px;
-    line-height: 34px;
+
+
+/*===========================
+    1. COMMON css 
+===========================*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap');
+
+ body {
+	font-family: $Barlow;
+	font-weight: normal;
+	font-style: normal;
+    color: $text-color;
+	background: #311768;
+	overflow-x: hidden;
 }
 
-a:active,
-a:hover,
+*{
+    margin: 0;
+    padding: 0;
+    @include box-sizing (border-box);
+}
+
+img {
+	max-width: 100%;
+}
+
 a:focus,
-a:visited {
-    text-decoration: none;
+input:focus,
+textarea:focus,
+button:focus {
+	text-decoration: none;
+	outline: none;
 }
 
-.page-wrapper {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    min-width: 300px;
-    overflow: hidden;
+a:focus,
+a:hover{
+	text-decoration: none;
 }
 
-.thm-base-bg {
-    background-color: $thm-base-color;
-}
-
-.thm-base-bg-2 {
-    background-color: $thm-base-color-2;
-}
-
-.thm-gray-bg {
-    background-color: $thm-gray;
-}
-
-@media(min-width: 1200px) {
-    .container {
-        max-width: 1200px;
-    }
-}
-
-
-.block-title {
-    margin-bottom: 45px;
-
-    &__title {
-        margin: 0;
-        margin-top: -10px;
-        font-size: 50px;
-        font-weight: 400;
-        color: $thm-black;
-        line-height: 1.2em;
-        span {
-            font-weight: 700;
-        }
-    }
-}
-
-
-.thm-btn {
-    border: none;
+i,
+span,
+a{
     display: inline-block;
-    vertical-align: middle;
-    outline: none;
-    font-size: 16px;
-    font-weight: 500;
-    color: $thm-black;
-    padding: 13px 41px;
-    border-radius: 5px;
-    transition: background .4s ease, color .4s ease;
-    background-image: linear-gradient(90deg, rgb(255, 78, 181) 0%, rgb(255, 160, 101) 100%);
-    position: relative;
-
-
-
-    &:before {
-        content: '';
-        position: absolute;
-        top: 2px;
-        right: 2px;
-        bottom: 2px;
-        left: 2px;
-        border-radius: 5px;
-        background-color: #fff;
-        transform: scaleX(1);
-        transition: transform .4s ease;
-    }
-
-    span {
-        position: relative;
-    }
-
-    &:hover {
-        color: #fff;
-
-        &:before {
-            transform: scaleX(0);
-        }
-    }
 }
 
-.post-pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    a {
-        border-radius: 50%;
-        background-color: $thm-gray;
-        font-size: 15px;
-        font-weight: 600;
-        text-align: center;
-        padding: 8px 19px;
-        color: $thm-black;
-        transition: all .4s ease;
-
-        &:hover,
-        &.active {
-            background-color: $thm-black;
-            color: #fff;
-        }
-
-        +a {
-            margin-left: 15px;
-        }
-    }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $Barlow;
+	font-weight: 700;
+	color: $heading-color;
+	margin: 0px;
 }
 
-.preloader {
-    position: fixed;
-    background-color: #fff;
+h1 {
+	font-size: 48px;
+}
+h2 {
+	font-size: 36px;
+}
+h3 {
+	font-size: 28px;
+}
+h4 {
+	font-size: 22px;
+}
+h5 {
+	font-size: 18px;
+}
+h6 {
+	font-size: 16px;
+}
+ul,ol {
+	margin: 0px;
+	padding: 0px;
+    list-style-type: none;
+}
+
+p {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	color: $text-color;
+	margin: 0px;
+}
+
+.bg_cover{
     background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9991;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    width: 100%;
+    height: 100%;
+}
 
-    &__image {
-        animation-fill-mode: both;
-        animation-name: flipInY;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
+.slick-slide {
+	outline: 0;
+}
+
+// others common css here
+
+
+
+/*===== All Button Style =====*/
+
+.main-btn {
+	display: inline-block;
+	font-weight: 700;
+	text-align: center;
+	white-space: nowrap;
+	text-transform: uppercase;
+	vertical-align: middle;
+	@include user-select(none);
+	border: 0px;
+	padding: 0 32px;
+	font-size: 14px;
+	line-height: 50px;
+    color: $white !important;
+    cursor: pointer;
+    z-index: 5;
+    @include transition(0.4s);
+	border-radius: 4px;
+	background: linear-gradient(to right, #c90075 0%, #de00ac 50%, #c90075 100%);
+	background-size: 200% auto;
+	letter-spacing: 1px;
+	box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.1),inset 0px -1px 1px 0px rgba(255, 255, 255, 0.2);
+	&:hover{
+		background-position: right center;
+	}
+    
+    &.main-btn-2{
+        background: linear-gradient(to right, #0065e8 0%, #11a2f1 50%, #0065e8 100%);
+        background-size: 200% auto;
+		&:hover{
+			background-position: right center;
+		}
+    }
+    
+    &.main-btn-3{
+        background: linear-gradient(to right, #ffa600 0%, #ffc50c 50%, #ffa600 100%);
+        background-size: 200% auto;
+		&:hover{
+			background-position: right center;
+		}
     }
 }
 
-.scroll-to-top {
-    display: inline-block;
-    width: 45px;
-    height: 45px;
-    background-image: linear-gradient(to right, rgb(255, 78, 181) 0%, rgb(255, 160, 101) 51%, rgb(255, 78, 181) 100%);
-    background-size: 200% auto;
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    z-index: 99;
-    text-align: center;
-    transition: .4s;
-    display: none;
-    border-radius: 50%;
-
-    i {
-        color: #fff;
-        font-size: 18px;
-        line-height: 45px;
-    }
-
-    &:hover {
-        background-position: right center;
-        i {
-            color: #fff;
-        }
-    }
 
 
+
+
+
+
+.section-title{
+	& span{
+		font-size: 20px;
+		font-weight: 600;
+		text-transform: uppercase;
+		color: $theme-color;
+		position: relative;
+		@media #{$xs} {
+			font-size: 16px;
+		}
+		&::before{
+			position: absolute;
+			content: '';
+			left: -58px;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 2px;
+			width: 48px;
+			background: $theme-color;
+			@media #{$xs} {
+				width: 20px;
+				left: -30px;
+			}
+		}
+		&::after{
+			position: absolute;
+			content: '';
+			right: -58px;
+			top: 50%;
+			transform: translateY(-50%);
+			height: 2px;
+			width: 48px;
+			background: $theme-color;
+			@media #{$xs} {
+				width: 20px;
+				right: -30px;
+			}
+		}
+	}
+	& .title{
+		font-size: 50px;
+		line-height: 60px;
+		font-weight: 600;
+		padding: 8px 10px 19px;
+		color: $white;
+		@media #{$lg} {
+			font-size: 38px;
+			line-height: 48px;
+		}
+		@media #{$xs} {
+			font-size: 30px;
+			line-height: 40px;
+		}
+		@media #{$sm} {
+			font-size: 38px;
+			line-height: 48px;
+		}
+	}
+	&.section-title-2{
+		& span{
+			color: $white;
+		}
+		& .title{
+			color: $white;
+			-webkit-text-fill-color: white;
+		}
+	}
 }
